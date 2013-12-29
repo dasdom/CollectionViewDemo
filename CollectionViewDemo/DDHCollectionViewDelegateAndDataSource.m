@@ -1,5 +1,5 @@
 //
-//  main.m
+//  DDHCollectionViewDelegateAndDataSource.m
 //  CollectionViewDemo
 //
 //  Created by dasdom on 29.12.13.
@@ -26,13 +26,32 @@
 //  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
 
-#import "DDHAppDelegate.h"
+#import "DDHCollectionViewDelegateAndDataSource.h"
+#import "DDHCollectionViewCell.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([DDHAppDelegate class]));
-    }
+@implementation DDHCollectionViewDelegateAndDataSource
+
+#pragma mark - cell registration protocol method
+- (void)registerCellsForCollectionView:(UICollectionView *)collectionView {
+    [collectionView registerClass:[DDHCollectionViewCell class] forCellWithReuseIdentifier:DDHCollectionViewCellIdentifier];
 }
+
+#pragma mark - collection view data source
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    DDHCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DDHCollectionViewCellIdentifier forIndexPath:indexPath];
+    
+    cell.nameLabel.text = [NSString stringWithFormat:@"section: %d, item: %d", indexPath.section, indexPath.item];
+    
+    return cell;
+}
+
+@end

@@ -1,7 +1,9 @@
 //
-//  Prefix header
+//  DDHCollectionViewDelegateAndDataSource.h
+//  CollectionViewDemo
 //
-//  The contents of this file are implicitly included at the beginning of every source file.
+//  Created by dasdom on 29.12.13.
+//  Copyright (c) 2013 dasdom. All rights reserved.
 //
 //  The MIT License (MIT)
 //
@@ -24,13 +26,9 @@
 //  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <Availability.h>
+#import <Foundation/Foundation.h>
+#import "DDHRegisterCellsProtocol.h"
 
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
+@interface DDHCollectionViewDelegateAndDataSource : NSObject <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DDHRegisterCellsProtocol>
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+@end

@@ -1,5 +1,5 @@
 //
-//  main.m
+//  DDHCollectionViewCell.m
 //  CollectionViewDemo
 //
 //  Created by dasdom on 29.12.13.
@@ -26,13 +26,37 @@
 //  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "DDHCollectionViewCell.h"
 
-#import "DDHAppDelegate.h"
+NSString *const DDHCollectionViewCellIdentifier = @"DDHCollectionViewCellIdentifier";
 
-int main(int argc, char * argv[])
+
+@implementation DDHCollectionViewCell
+
+- (id)initWithFrame:(CGRect)frame
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([DDHAppDelegate class]));
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor whiteColor];
+        
+        _nameLabel = [[UILabel alloc] init];
+        _nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_nameLabel];
+        
+        NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(_nameLabel);
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_nameLabel]-|" options:0 metrics:nil views:viewsDictionary]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_nameLabel]|" options:0 metrics:nil views:viewsDictionary]];
     }
+    return self;
 }
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+}
+*/
+
+@end

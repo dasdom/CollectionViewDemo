@@ -19,6 +19,9 @@
 		F28B7CC11870722B00A6C6ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28B7CA91870722B00A6C6ED /* UIKit.framework */; };
 		F28B7CC91870722B00A6C6ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F28B7CC71870722B00A6C6ED /* InfoPlist.strings */; };
 		F28B7CCB1870722B00A6C6ED /* CollectionViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F28B7CCA1870722B00A6C6ED /* CollectionViewDemoTests.m */; };
+		F28B7CDB1870725B00A6C6ED /* DDHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F28B7CD51870725B00A6C6ED /* DDHCollectionViewCell.m */; };
+		F28B7CDC1870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F28B7CD71870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.m */; };
+		F28B7CDD1870725B00A6C6ED /* DDHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28B7CDA1870725B00A6C6ED /* DDHViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,13 @@
 		F28B7CC61870722B00A6C6ED /* CollectionViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CollectionViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		F28B7CC81870722B00A6C6ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F28B7CCA1870722B00A6C6ED /* CollectionViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDemoTests.m; sourceTree = "<group>"; };
+		F28B7CD41870725B00A6C6ED /* DDHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHCollectionViewCell.h; sourceTree = "<group>"; };
+		F28B7CD51870725B00A6C6ED /* DDHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHCollectionViewCell.m; sourceTree = "<group>"; };
+		F28B7CD61870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHCollectionViewDelegateAndDataSource.h; sourceTree = "<group>"; };
+		F28B7CD71870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHCollectionViewDelegateAndDataSource.m; sourceTree = "<group>"; };
+		F28B7CD81870725B00A6C6ED /* DDHRegisterCellsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHRegisterCellsProtocol.h; sourceTree = "<group>"; };
+		F28B7CD91870725B00A6C6ED /* DDHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHViewController.h; sourceTree = "<group>"; };
+		F28B7CDA1870725B00A6C6ED /* DDHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,13 @@
 			children = (
 				F28B7CB41870722B00A6C6ED /* DDHAppDelegate.h */,
 				F28B7CB51870722B00A6C6ED /* DDHAppDelegate.m */,
+				F28B7CD91870725B00A6C6ED /* DDHViewController.h */,
+				F28B7CDA1870725B00A6C6ED /* DDHViewController.m */,
+				F28B7CD41870725B00A6C6ED /* DDHCollectionViewCell.h */,
+				F28B7CD51870725B00A6C6ED /* DDHCollectionViewCell.m */,
+				F28B7CD61870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.h */,
+				F28B7CD71870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.m */,
+				F28B7CD81870725B00A6C6ED /* DDHRegisterCellsProtocol.h */,
 				F28B7CB71870722B00A6C6ED /* Images.xcassets */,
 				F28B7CAC1870722B00A6C6ED /* Supporting Files */,
 			);
@@ -240,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28B7CDD1870725B00A6C6ED /* DDHViewController.m in Sources */,
 				F28B7CB21870722B00A6C6ED /* main.m in Sources */,
 				F28B7CB61870722B00A6C6ED /* DDHAppDelegate.m in Sources */,
+				F28B7CDB1870725B00A6C6ED /* DDHCollectionViewCell.m in Sources */,
+				F28B7CDC1870725B00A6C6ED /* DDHCollectionViewDelegateAndDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
